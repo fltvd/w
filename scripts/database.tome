@@ -1,15 +1,14 @@
 var database = `
 
-TODAY
-  WEATHER : Sunny
-  FOOD : Asparagus
+2018-4-14 
+  TASK : Shopping for motor
+  NOTE : Found 4 to choose from but none are quite right. Either too big or wrong RPM. High RPM might be ok but need gearbox
+  START : 1700
+  END :   1900
 
-YESTERDAY
-  WEATHER : Sunny
-  FOOD : banana
-
-LAST YEAR
-  WEATHER : Sunny
-  FOOD : banana
-
+2018-4-15 
+  TASK : CNC parts
+  NOTE : Called local shop to ask if they do CNC, but I don't think they will.
+  START : 0800
+  END :   0830
 `;

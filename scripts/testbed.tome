@@ -1,0 +1,17 @@
+var database = `
+
+TODAY
+  WEATHER : Sunny
+  FOOD : Asparagus
+  banana : bnananananan
+
+YESTERDAY
+  WEATHER : Sunny
+  FOOD : banana
+
+LAST YEAR
+  WEATHER : Sunny
+  FOOD : in west philidelphia born and raised.  on a playground is where i spent most of my deays
+  START : 400
+  END : 500
+`;

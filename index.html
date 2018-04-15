@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<script src="scripts/indental.js"></script>
-<script src="scripts/database.tome"></script>
-<title>Simple JSON parser</title>
+  <meta charset="utf-8">
+  <script src="scripts/indental.js"></script>
+  <script src="scripts/database.tome"></script>
+
+  <link rel="stylesheet" type="text/css" href="main.css" />
+
+  <title>log</title>
 </head>
+
 <body>
- <div id='hey'></div>
- <script>
-   var html = ""
-   var db = new Indental(database).parse()
-   var target = document.getElementById('hey')
-   for(id in db){
-     var entry = db[id]
-     html += `<h1>${id}</h1>`
-     for(key in entry){
-       html += `<p>${key} -> ${entry[key]}</p>`
-     }
-   }
-   target.innerHTML = html
-   
- </script>
+  <div id='hey'></div>
+  <script>
+    var html = "";
+    var db = new Indental(database).parse()
+    var target = document.getElementById('hey')
+    html += `<div id="feed">`
+    for (id in db) {
+      var entry = db[id]
+      html += `<div class="entry">`
+      html += `<h2>${id}</h2>`
+      var timeLabel = ""
+      var startTime = 0
+      var endTime = 0
+      var duration = 0
+      for (key in entry) {
+        var value = entry[key]
+        if( key == "TASK") {
+          html += `<div class="title">${value}</div>`
+        }
+        else if( key == "NOTE") {
+          html += `<p class="note">${value}</p>`
+        }        
+        else if (key == "START") {
+          startTime = value
+        }
+        else if (key == "END") {
+          if (startTime != 0) {
+            endTime = value
+            duration = endTime - startTime
+          }        
+        }
+        else {
+          html += `<p> <span class="label">${key}:</span>  ${value}</p>`
+        }
+      }
+
+      html += `<p class="time"><span class="label">${startTime}</span> ...  <span class="label">${endTime}</span>`
+      html += `</div>`
+    }
+    html += `</div>`
+    html += `<br> <hr>`
+    html += new Date().toTimeString()
+    target.innerHTML = html
+
+  </script>
 </body>
+
 </html>

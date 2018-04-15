@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+body
+{
+  font-family: 'Work Sans', sans-serif;
+
+  --bg-green: rgb(70, 78, 61);
+  --bg-green-overlay: rgba(0,0,0,0.1);
+  --fg-yellow: #EAC61F;
+  --fg-grey: #888888;
+}
+
+body,
+body #feed .badge,
+body #feed .entry {
+  background-color: var(--bg-green);
+  color: #c9cacc;
+}
+
+body #portal #profile .name {
+	color: var( --fg-yellow );
+}
+
+body {
+	  /* background-image: url("skully.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom left;  */
+
+}
+
+body #portal #logo,
+body #portal .icon,
+body #feed .badge img,
+body #feed .entry .icon, 
+body #operator #icon {
+	filter: invert(50%);
+}
+
+body #operator { background-color: var( --bg-green ); }
+body #operator #wrapper {background-color: var( --bg-green-overlay ); color:#000; border-bottom: 0; border: 1px solid var( --fg-grey ); border-radius: 8px;}
+body #operator textarea { color:var( --fg-yellow ); }
+body #operator #options { color:var( --fg-yellow ); }
+body #operator #hint { color: var( --fg-yellow ) }
+body #operator #hint.autocomplete { color:var( --fg-yellow ); }
+body #operator #options t:hover { text-decoration: underline; color:var( --fg-yellow ); cursor:pointer; }
+body #operator #rune { left:8px; color:var( --fg-yellow ); }
+
+body #feed {
+  width: 66%;
+  margin: 0 auto;
+}
+
+body #feed .entry {
+  margin-top: 16px;
+  background-color: var( --bg-green-overlay );
+  padding: 16px;
+  border: 1px solid var(--fg-grey);
+  border-radius: 5px;  
+  }
+  
+  body #feed .entry:hover {
+  background-color: rgba(255, 255, 255, 0.068);
+  }
+  
+  body #feed .entry h2 {
+    color: var(--fg-yellow);
+    line-height: 0px;    
+  }
+  
+  body #feed .entry .title {
+    font-weight: bold;
+    line-height: 0px;
+    padding-bottom: 16px;
+  }
+  body #feed .entry .time {
+    font-size: small
+  }
+  body #feed .entry .note p {
+    padding-top: 0px;
+  }
+  body #feed .entry .time .label {
+    font-weight: bold
+  }
+  
+  
+body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
+body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }
