@@ -1,15 +1,15 @@
 var database = `
 
 TODAY
- WEATHER : Sunny
- FOOD : Asparagus
+  WEATHER : Sunny
+  FOOD : Asparagus
 
 YESTERDAY
- WEATHER : Sunny
- FOOD : banana
+  WEATHER : Sunny
+  FOOD : banana
 
 LAST YEAR
- WEATHER : Sunny
- FOOD : banana
+  WEATHER : Sunny
+  FOOD : banana
 
 `;

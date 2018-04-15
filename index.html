@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <script src="scripts/indental.js"></script>
- <script src="scripts/database.tome"></script>
- <title>Simple JSON parser</title>
+<meta charset="utf-8">
+<script src="scripts/indental.js"></script>
+<script src="scripts/database.tome"></script>
+<title>Simple JSON parser</title>
 </head>
 <body>
+ <div id='hey'></div>
  <script>
-   console.log(new Indental(database))
+   var html = ""
+   var db = new Indental(database).parse()
+   var target = document.getElementById('hey')
+   for(id in db){
+     var entry = db[id]
+     html += `<h1>${id}</h1>`
+     for(key in entry){
+       html += `<p>${key} -> ${entry[key]}</p>`
+     }
+   }
+   target.innerHTML = html
+   
  </script>
 </body>
 </html>
