@@ -1,14 +1,20 @@
 var database = `
 
+2018-4-13 
+  TITL : I can post images
+  TEXT : This is a thing
+  NOTE : Here's a note near the end of the post.
+  TIME : 3
+  IMAG : station.jpg
+  TAGS : art images hashtag content
+
 2018-4-14 
-  TASK : Shopping for motor
-  NOTE : Found 4 to choose from but none are quite right. Either too big or wrong RPM. High RPM might be ok but need gearbox
-  START : 1700
-  END :   1900
+  TITL : Shopping for motor
+  TEXT : Found 4 to choose from but none are quite right. Either too big or wrong RPM. High RPM might be ok but need gearbox
+  TIME : 3
 
 2018-4-15 
-  TASK : CNC parts
-  NOTE : Called local shop to ask if they do CNC, but I don't think they will.
-  START : 0800
-  END :   0830
+  TITL : CNC parts
+  TEXT : Called local shop to ask if they do CNC, but I don't think they will.
+  TIME : 1
 `;

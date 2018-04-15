@@ -60,7 +60,7 @@ body #feed .entry {
   }
   
   body #feed .entry:hover {
-  background-color: rgba(255, 255, 255, 0.068);
+  /* background-color: rgba(255, 255, 255, 0.068); */
   }
   
   body #feed .entry h2 {
@@ -76,13 +76,39 @@ body #feed .entry {
   body #feed .entry .time {
     font-size: small
   }
-  body #feed .entry .note p {
+  body #feed .entry .text p {
     padding-top: 0px;
   }
+  body #feed .entry .note {
+    font-size: small
+  }
+  
   body #feed .entry .time .label {
     font-weight: bold
   }
+
+  body #feed .entry .media {
+    max-width:100%;
+    max-height:100%;
+    align-content: center;
+  }  
   
+  body #feed .entry .tag { 
+    color:var( --fg-yellow );
+    border: 1px solid var( --fg-yellow );
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: small;
+    padding: 0 10px;
+    margin-right: 8px;
+    
+  }
   
+  body #feed .entry .tag:hover { 
+    background: rgba(255,210,0,0.25);
+    color:var( --fg-yellow );
+  }
+  
+
 body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
 body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }
