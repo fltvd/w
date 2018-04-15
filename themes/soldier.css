@@ -17,10 +17,6 @@ body #feed .entry {
   color: #c9cacc;
 }
 
-body #portal #profile .name {
-	color: var( --fg-yellow );
-}
-
 body {
 	  /* background-image: url("skully.svg");
     background-repeat: no-repeat;
@@ -29,22 +25,9 @@ body {
 
 }
 
-body #portal #logo,
-body #portal .icon,
-body #feed .badge img,
-body #feed .entry .icon, 
-body #operator #icon {
-	filter: invert(50%);
+body hr {
+  color: rgba(255, 255, 255, 0.096)
 }
-
-body #operator { background-color: var( --bg-green ); }
-body #operator #wrapper {background-color: var( --bg-green-overlay ); color:#000; border-bottom: 0; border: 1px solid var( --fg-grey ); border-radius: 8px;}
-body #operator textarea { color:var( --fg-yellow ); }
-body #operator #options { color:var( --fg-yellow ); }
-body #operator #hint { color: var( --fg-yellow ) }
-body #operator #hint.autocomplete { color:var( --fg-yellow ); }
-body #operator #options t:hover { text-decoration: underline; color:var( --fg-yellow ); cursor:pointer; }
-body #operator #rune { left:8px; color:var( --fg-yellow ); }
 
 body #feed {
   width: 66%;

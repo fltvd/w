@@ -2,9 +2,8 @@ var database = `
 
 2018-4-13 
   TITL : I can post images
-  TEXT : This is a thing
+  TEXT : This is a thing. I can type some words and things.
   NOTE : Here's a note near the end of the post.
-  TIME : 3
   IMAG : station.jpg
   TAGS : art images hashtag content
 
@@ -12,9 +11,11 @@ var database = `
   TITL : Shopping for motor
   TEXT : Found 4 to choose from but none are quite right. Either too big or wrong RPM. High RPM might be ok but need gearbox
   TIME : 3
+  TAGS : shredder
 
 2018-4-15 
   TITL : CNC parts
   TEXT : Called local shop to ask if they do CNC, but I don't think they will.
   TIME : 1
+  TAGS : shredder
 `;
