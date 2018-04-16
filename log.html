@@ -42,10 +42,21 @@
       if (!filter) {
 
         html += `<div class="entry">`
-//        html += `<h2>${entry["TITL"]}</h2>`
-//        html += `<div class="title">${id}</div>`
-        html += `<p class="text">${entry["TEXT"]}</p>`
+        //        html += `<h2>${entry["TITL"]}</h2>`
+        //        html += `<div class="title">${id}</div>`
+        html += `<p class="text"><span class="subject">${entry["SUBJ"]}</span>${entry["TEXT"]}<span class="date">${entry["DATE"]}</span></p>`
         html += `<p class="note">${entry["NOTE"]}</p>`
+
+        if (entry["LIST"].length > 0) {
+          html += `<ul>`;
+          for (i in entry["LIST"]) {
+            var status = entry["LIST"][i]["mark"] == '+';
+            var mark = (status == "true" ? '&#9672;' : '&#9678;');
+            html += `<li><span class="mark${status}">${mark + ' ' + entry["LIST"][i]["content"].toUpperCase()}</span></li>`;
+          }
+          html += `</ul>`;
+
+        }
 
         if ("TIME" in entry) {
           html += `<p class="time"><span class="label">${entry["TIME"]}</span> hours </p>`
@@ -53,17 +64,17 @@
 
         if ("TAGS" in entry) {
           for (var i = 0; i < tags.length; i++) {
-            html += `<a class="tag" href="${location.pathname+"?filterTag="+tags[i]}">${tags[i].toUpperCase()}</a> `
+            html += `<a class="tag" href="${location.pathname + "?filterTag=" + tags[i]}">${tags[i].toUpperCase()}</a> `
           }
         }
-        html += `<div class="bar" width=30 height=30></div>`
+        // html += `<div class="bar" width=30 height=30></div>`
         html += `</div>`
       }
     }
     html += `</div>`
     html += `<br> <hr>`
     html += new Date().toTimeString()
-    
+
     target.innerHTML = html
 
   </script>

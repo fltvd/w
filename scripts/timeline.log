@@ -1,25 +1,31 @@
-//MAKE THIS FLATTER
-
 var database = `
     
-    @
-    DATE: 4-12-2018 
-    SUBJ: Cooking
-    TEXT: Chorizo and 2 eggs
-    NOTE: 500 calories
-        + Thing
-        + Thing 2
-        + Thind 3
-    TAGS: food eggsff
-    BANANA: tionasf
+    DATE: 4-17-2018 
+    SUBJ: Picker
+    TEXT: Hull surface material  
+    NOTE: Need to check roughness across other light setups
+        - UV channel for decals
+        + Procedural plating pattern
+        - Grime layer
+    TIME: 6
+    TAGS: art mars tech
+  
+    DATE: 4-16-2018 
+    SUBJ: Picker
+    TEXT: Crusher mechanism
+    NOTE: Layout
+        - model
+        + materials
+    TAGS: art mars tech
 
-    @
-    DATE: 4-12-2018 
-    SUBJ: timeline
-    TEXT: Getting started
-    NOTE: This could be cool
-    TAGS: timeline
-    TIME: 4
-    COMP: 10
+    DATE: 4-15-2018 
+    SUBJ: Picker
+    TEXT: Hull surface material  
+    NOTE: Need to check roughness across other light setups
+        - UV channel for decals
+        + Procedural plating pattern
+        - Grime layer
+    TIME: 1
+    TAGS: art tech
 
 `;
