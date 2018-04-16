@@ -13,11 +13,11 @@ function Timeline(data) {
             s = 0;
             for (var l in lines) {
                 line = lines[l].trim();
-                                    
-                if (line.startsWith('+')||line.startsWith('-')) {
+
+                if (line.startsWith('+') || line.startsWith('-')) {
                     var li = {};
                     li.content = line.substr(2);
-                    li.mark = line[0]; 
+                    li.mark = line[0];
                     subList[s] = li;
                     s++;
                 }
@@ -32,4 +32,26 @@ function Timeline(data) {
         }
         return db;
     }
+}
+
+function GetHoursForTags(db) {
+    var data = {}
+    for (id in db) {
+        var entry = db[id];
+        if ("TIME" in entry) {
+            var time = parseInt(entry["TIME"]);
+            var tags = entry["TAGS"].split(" ");
+            for (var i in tags) {
+                tag = tags[i];
+                if (!(tag in data)) {
+                    data[tag] = time;
+                }
+                else
+                {
+                    data[tag] += time;
+                }
+            }
+        }
+    }
+    return data;
 }

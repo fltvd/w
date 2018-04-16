@@ -38,6 +38,14 @@ body #feed {
   margin: 0 auto;
 }
 
+body #feed .graph {
+  background: var(--fg-darkgrey);
+  padding: 8px;
+  color: var(--fg-lightgrey);
+  font-weight: bold;
+  border-radius: 5px;   
+}
+
 body #feed .entry {
   margin-top: 16px;
   background-color: var( --bg-green-overlay );

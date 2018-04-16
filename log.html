@@ -21,6 +21,24 @@
 
     html += `<div id="feed">`
 
+    if (filterTag != "") {
+      html += `<div class="graph">`
+
+      var graphData = GetHoursForTags(db);
+      for (d in graphData) {
+        html += `<p>`;
+        for (var i=0; i<graphData[d]; i++) {
+          html += '&#9646;'
+        }
+        html += ` ` + d;
+        html += `</p>`;
+      }
+
+      html += `</div>`
+    }
+
+    console.log(GetHoursForTags(db));
+
     for (id in db) {
       var entry = db[id];
       console.log(entry);
