@@ -20,8 +20,8 @@
     var filterTag = (location.search.split('filterTag=')[1] || '').split('&')[0]
 
     html += `<div id="feed">`
-
     for (id in db) {
+         console.log(db[id]);
       var entry = db[id]
       var tags
       var filter = false

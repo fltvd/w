@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <script src="scripts/indental.js"></script>
-  <script src="scripts/database.tome"></script>
+  <script src="scripts/timeline.js"></script>
+  <script src="scripts/timeline.log"></script>
 
   <link rel="stylesheet" type="text/css" href="main.css" />
 
@@ -15,16 +15,19 @@
   <div id='hey'></div>
   <script>
     var html = "";
-    var db = new Indental(database).parse()
+    var db = new Timeline(database).parse()
     var target = document.getElementById('hey')
     var filterTag = (location.search.split('filterTag=')[1] || '').split('&')[0]
 
     html += `<div id="feed">`
 
     for (id in db) {
-      var entry = db[id]
+      var entry = db[id];
+      console.log(entry);
+
       var tags
       var filter = false
+
       if (filterTag != "") {
         filter = true
       }
@@ -39,35 +42,28 @@
       if (!filter) {
 
         html += `<div class="entry">`
-        html += `<h2>${entry["TITL"]}</h2>`
-        html += `<div class="title">${id}</div>`
+//        html += `<h2>${entry["TITL"]}</h2>`
+//        html += `<div class="title">${id}</div>`
         html += `<p class="text">${entry["TEXT"]}</p>`
-
-        if ("IMAG" in entry) {
-          html += `<img src="media/${entry["IMAG"]}" class="media">`
-        }
-
-        if ("NOTE" in entry) {
-          html += `<p class="note">${entry["NOTE"]}</p>`
-        }
+        html += `<p class="note">${entry["NOTE"]}</p>`
 
         if ("TIME" in entry) {
           html += `<p class="time"><span class="label">${entry["TIME"]}</span> hours </p>`
         }
 
         if ("TAGS" in entry) {
-
           for (var i = 0; i < tags.length; i++) {
-            html += `<a class="tag" href="${location.pathname+"?filterTag="+tags[i]}">${tags[i]}</a> `
+            html += `<a class="tag" href="${location.pathname+"?filterTag="+tags[i]}">${tags[i].toUpperCase()}</a> `
           }
         }
-
+        html += `<div class="bar" width=30 height=30></div>`
         html += `</div>`
       }
     }
     html += `</div>`
     html += `<br> <hr>`
     html += new Date().toTimeString()
+    
     target.innerHTML = html
 
   </script>

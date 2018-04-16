@@ -91,7 +91,16 @@ body #feed .entry {
     background: rgba(255,210,0,0.25);
     color:var( --fg-yellow );
   }
-  
 
-body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
-body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }
+  body #feed .entry .bar { 
+    color: rgb(250, 131, 34);
+    border: 1px solid var( --fg-yellow );
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: small;
+    padding: 0 10px;
+    margin-right: 8px;  
+  }
+
+  body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
+  body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }

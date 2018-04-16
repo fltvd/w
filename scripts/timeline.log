@@ -1,0 +1,25 @@
+//MAKE THIS FLATTER
+
+var database = `
+    
+    @
+    DATE: 4-12-2018 
+    SUBJ: Cooking
+    TEXT: Chorizo and 2 eggs
+    NOTE: 500 calories
+        + Thing
+        + Thing 2
+        + Thind 3
+    TAGS: food eggsff
+    BANANA: tionasf
+
+    @
+    DATE: 4-12-2018 
+    SUBJ: timeline
+    TEXT: Getting started
+    NOTE: This could be cool
+    TAGS: timeline
+    TIME: 4
+    COMP: 10
+
+`;
