@@ -27,22 +27,22 @@
       var graphData = GetHoursForTags(db);
       for (d in graphData) {
         html += `<p>`;
+        html += `<span class="label">`;
+        html += ` ` + d;
+        html += `</span>`;          
+        html += `<span class="bar">`;
         for (var i=0; i<graphData[d]; i++) {
           html += '&#9646;'
         }
-        html += ` ` + d;
+        html += `</span>`;
         html += `</p>`;
       }
 
       html += `</div>`
     }
 
-    console.log(GetHoursForTags(db));
-
     for (id in db) {
       var entry = db[id];
-      console.log(entry);
-
       var tags
       var filter = false
 

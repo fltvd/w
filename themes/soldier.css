@@ -46,6 +46,21 @@ body #feed .graph {
   border-radius: 5px;   
 }
 
+body #feed .graph p {
+  margin: 0px;
+}
+
+body #feed .graph .label {
+  width: 50px;
+  float: left;
+}
+
+body #feed .graph .bar {
+  letter-spacing: 0pt;
+  color: var(--fg-yellow);
+}
+
+
 body #feed .entry {
   margin-top: 16px;
   background-color: var( --bg-green-overlay );
