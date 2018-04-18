@@ -1,5 +1,11 @@
 var database = `
     
+    DATE: 4-18-2018
+    SUBJ: LOGGER
+    TEXT: Graphing system and interface
+    TIME: 3
+    TAGS: code
+
     DATE: 4-17-2018 
     SUBJ: Picker
     TEXT: Hull surface material  
@@ -8,7 +14,7 @@ var database = `
         + Procedural plating pattern
         - Grime layer
     TIME: 6
-    TAGS: mars tech
+    TAGS: art mars
   
     DATE: 4-16-2018 
     SUBJ: Picker

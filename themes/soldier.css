@@ -9,6 +9,7 @@ body
   --fg-yellow: #EAC61F;
   --fg-red: #f84008;
   --fg-darkgrey : #2c2c29;
+  --fg-darkgrey-hilight : #3a3a35;
   --fg-green: #75bc45;
   --fg-lightgrey: #b7b3a1;
   --fg-grey: #7c7b72;
@@ -46,140 +47,189 @@ body #feed .graph {
   border-radius: 5px;   
 }
 
+
+body #feed .graph:hover {
+background: var(--fg-darkgrey-hilight);
+}
+
+body #feed .graph_min {
+background: var(--fg-darkgrey);
+padding: 8px;
+color: var(--fg-lightgrey);
+font-weight: bold;
+font-size: 12px;
+border-radius: 5px;
+
+}
+
+body #feed .entrycontent {
+display: block;
+}
+
+
+body #feed .graph_min:hover {
+background: var(--fg-darkgrey-hilight);
+}
+
 body #feed .graph p {
-  margin: 0px;
+margin: 0px;
 }
 
 body #feed .graph .label {
-  width: 50px;
-  float: left;
+width: 50px;
+float: left;
+}
+
+body #feed .graph .labelhilight {
+color: var(--fg-green);
 }
 
 body #feed .graph .bar {
-  letter-spacing: 0pt;
-  color: var(--fg-yellow);
+letter-spacing: 0pt;
+color: var(--fg-yellow);
 }
 
 
 body #feed .entry {
-  margin-top: 16px;
-  background-color: var( --bg-green-overlay );
-  padding: 4px 4px 8px 4px;
-  /* border: 1px solid; */
+margin-top: 16px;
+background-color: var( --bg-green-overlay );
+padding: 4px 4px 8px 4px;
+/* border: 1px solid; */
+border-radius: 5px;  
+}
+
+body #feed .entry:hover {
+/* background-color: rgba(255, 255, 255, 0.068); */
+}
+
+body #feed .entry h2 {
+  color: var(--fg-yellow);
+  line-height: 0px;    
+}
+
+
+body #feed .entry .time {
+  font-size: small;
+  padding: 8px 8px;    
+  margin: 0;
+}
+  
+body #feed .entry .time .label {
+  font-weight: bold
+}
+
+body #feed .entry .subject {
+  padding: 2px 4px;
+  color: var(--fg-darkgrey);
+  margin: 0;
+  background: var(--fg-yellow);
+  border-radius: 5px; 
+  margin-right: 6px;
+  margin-left: 0px;
+}
+
+body #feed .entry .date {
+  color: var(--fg-grey);
+  margin: 0;
+  /* background: var(--fg-green); */
+  padding: 0px 4px;
+  border-radius: 5px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  float: right;
+}
+
+body #feed .entry .text {
+  padding: 6px;
+  color: var(--fg-lightgrey);
+  margin: 0;
+  background: var(--fg-darkgrey);
   border-radius: 5px;  
-  }
-  
-  body #feed .entry:hover {
-  /* background-color: rgba(255, 255, 255, 0.068); */
-  }
-  
-  body #feed .entry h2 {
-    color: var(--fg-yellow);
-    line-height: 0px;    
-  }
-  
+  padding-left: 4px;
+}
 
-  body #feed .entry .time {
-    font-size: small;
-    padding: 8px 8px;    
-    margin: 0;
-  }
-    
-  body #feed .entry .time .label {
-    font-weight: bold
-  }
+body #feed .entry .text:hover {
+  background: var(--fg-darkgrey-hilight);
+}
 
-  body #feed .entry .subject {
-    padding: 2px 4px;
-    color: var(--fg-darkgrey);
-    margin: 0;
-    background: var(--fg-yellow);
-    border-radius: 5px; 
-    margin-right: 6px;
-    margin-left: 0px;
-  }
+body #feed .entry .note {
+  font-size: small;
+  padding: 8px 8px;    
+  margin: 0;
+}
 
-  body #feed .entry .date {
-    color: var(--fg-grey);
-    margin: 0;
-    /* background: var(--fg-green); */
-    padding: 0px 4px;
-    border-radius: 5px; 
-    margin-right: 0px;
-    margin-left: 0px;
-    float: right;
-  }
+body #feed .entry .media {
+  max-width:100%;
+  max-height:100%;
+  align-content: center;
+}  
 
-  body #feed .entry .text {
-    padding: 6px;
-    color: var(--fg-lightgrey);
-    margin: 0;
-    background: var(--fg-darkgrey);
-    border-radius: 5px;  
-    padding-left: 4px;
-  }
 
-  body #feed .entry .note {
-    font-size: small;
-    padding: 8px 8px;    
-    margin: 0;
-  }
+body #feed .button { 
+  color:var( --fg-yellow );
+  border: 1px solid var( --fg-yellow );
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: small;
+  padding: 0 10px;
+  margin-right: 4px;   
+}
 
-  body #feed .entry .media {
-    max-width:100%;
-    max-height:100%;
-    align-content: center;
-  }  
-  
-  body #feed .entry .tag { 
-    color:var( --fg-yellow );
-    border: 1px solid var( --fg-yellow );
-    border-radius: 16px;
-    text-decoration: none;
-    font-size: small;
-    padding: 0 10px;
-    margin-right: 4px;    
-  }
+body #feed .button:hover { 
+  background: rgba(255,210,0,0.25);
+  color:var( --fg-yellow );
+}
 
-  body #feed .entry ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 8px 0;
-  }
+body #feed .tag { 
+  color:var( --fg-yellow );
+  border: 1px solid var( --fg-yellow );
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: small;
+  padding: 0 10px;
+  margin-right: 4px;    
+}
 
-  body #feed .entry li { 
-    color:var( --fg-lightgrey );
-    text-decoration: none;
-    font-size: small;
-    padding: 0 10px;
-    margin-right: 8px;
-    letter-spacing: 0.5px;
-    font-weight: bold;
-  }
+body #feed .tag:hover { 
+  background: rgba(255,210,0,0.25);
+  color:var( --fg-yellow );
+}
 
-  body #feed .entry .marktrue
-  {
-    color: var(--fg-lightgrey);
-  }
-  body #feed .entry .markfalse
-  {
-    color: var(--fg-red);
-  }
-  
-  body #feed .entry .tag:hover { 
-    background: rgba(255,210,0,0.25);
-    color:var( --fg-yellow );
-  }
+body #feed .entry ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 8px 0;
+}
 
-  body #feed .entry .bar { 
-    color: rgb(250, 131, 34);
-    border: 1px solid var( --fg-yellow );
-    border-radius: 16px;
-    text-decoration: none;
-    font-size: small;
-    padding: 0 10px;
-    margin-right: 8px;  
-  }
+body #feed .entry li { 
+  color:var( --fg-lightgrey );
+  text-decoration: none;
+  font-size: small;
+  padding: 0 10px;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
 
-  body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
-  body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }
+body #feed .entry .marktrue
+{
+  color: var(--fg-lightgrey);
+}
+body #feed .entry .markfalse
+{
+  color: var(--fg-red);
+}
+
+
+body #feed .entry .bar { 
+  color: rgb(250, 131, 34);
+  border: 1px solid var( --fg-yellow );
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: small;
+  padding: 0 10px;
+  margin-right: 8px;  
+}
+
+body #feed .entry .link { color:var( --fg-yellow ); border: 1px solid var( --fg-yellow ); border-radius: 16px; }
+body #feed .entry .link:hover { background: rgba(255,210,0,0.25); color:var( --fg-yellow ); }
